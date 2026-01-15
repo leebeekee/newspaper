@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>신문사설 검색 시스템</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-glob"></div>
+    <header class="main-header">
+        <div class="logo">Editorial<span>Search</span></div>
+        <a href="login.html" class="admin-login-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+            관리자 로그인
+        </a>
+    </header>
+
+    <main class="search-container">
+        <div class="search-hero">
+            <h1>신문사설 데이터베이스</h1>
+            <p>배경, 근거, 주장, 사실 구조 기반 정밀 검색</p>
+            
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="검색어를 입력하세요 (제목, 작성자, 내용 등)">
+                <button id="searchBtn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                </button>
+            </div>
+            <div class="detailed-search-options">
+                <input type="text" id="searchBackground" placeholder="배경: 키워드 입력">
+                <input type="text" id="searchEvidence" placeholder="근거: 키워드 입력">
+                <input type="text" id="searchArgument" placeholder="주장: 키워드 입력">
+                <input type="text" id="searchFact" placeholder="사실: 키워드 입력">
+            </div>
+        </div>
+
+        <div id="resultsArea" class="results-area hidden">
+            <!-- Search results will appear here -->
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

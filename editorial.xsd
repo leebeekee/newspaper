@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+    <!-- Root Element -->
+    <xs:element name="editorials">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="editorial" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="title" type="xs:string"/>
+                            <xs:element name="author" type="xs:string"/>
+                            <xs:element name="date" type="xs:date"/>
+                            <xs:element name="structure">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="background" type="xs:string"/>
+                                        <xs:element name="evidence" type="xs:string"/>
+                                        <xs:element name="argument" type="xs:string"/>
+                                        <xs:element name="fact" type="xs:string"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="id" type="xs:string" use="required"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>
